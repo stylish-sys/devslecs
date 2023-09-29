@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+@import url("/include/font/SCDream/fonts.css");
+
+* {
+	font-family: 'Nanum Myeongjo', 'Nanum Gothic', sans-serif, 'helvetica', serif, 'AppleGothic';
+	max-width: 700px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.mgt30{
+	margin-top:30px;
+}
+div{
+	display: block;
+}
+
+/*
+.img01 {
+	position: relative;
+	padding: 1.875rem 1.563rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	-webkit-box-orient: vertical;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	position: relative;
+	text-align: center;
+}
+
+.img01 .tit{
+	z-index: 10;
+    position: absolute;
+    left: 50%;
+    top: 5rem;
+    width: auto;
+    padding: 0.938rem 0.625rem 1.25rem;
+    background: rgba(255, 255, 255, .6);
+    transform: translate(-50%, 0);
+}
+
+.img01 .tit .p1{
+	font-size: 0.688rem;
+    font-weight: 300;
+    line-height: 0.938rem;
+    color: #7c6a52;
+    padding-bottom: 1.25rem;
+    background-size: 0.438rem auto;
+    white-space: nowrap;
+}
+.img01 .tit .p2{
+	font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.500rem;
+    color: #414141;
+}
+
+.img01 .tit .p2 .vs-span{
+	display:block;
+}*/

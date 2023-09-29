@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -26,35 +27,31 @@ public class MnController {
 		return "index";
 	}
 	
-	@RequestMapping("/{ctx}/cmmn/header")
-	public String comnHeader(@PathVariable String system, HttpServletRequest request, HttpServletResponse respose) throws Exception{
+	@RequestMapping("/{system}")
+	public String comnWedding(@PathVariable String system, Model model, HttpServletRequest request, HttpServletResponse respose) throws Exception{
+		model.addAttribute("content", "views/slec/system/" + system + ".jsp");
+		return "layout/layout";
+	}
+	
+	@RequestMapping("/cmmn/header")
+	public String comnHeader(HttpServletRequest request, HttpServletResponse respose) throws Exception{
 		return "layout/header";
 	}
 	
-	@RequestMapping("/{ctx}/cmmn/menu")
-	public String comnMenu(@PathVariable String system, HttpServletRequest request, HttpServletResponse respose) throws Exception{
+	@RequestMapping("/cmmn/menu")
+	public String comnMenu(HttpServletRequest request, HttpServletResponse respose) throws Exception{
 		return "layout/menu";
 	}
 	
-	@RequestMapping("/{ctx}/cmmn/left")
-	public String comnLeft(@PathVariable String system, HttpServletRequest request, HttpServletResponse respose) throws Exception{
+	@RequestMapping("/cmmn/left")
+	public String comnLeft(HttpServletRequest request, HttpServletResponse respose) throws Exception{
 		return "layout/left";
 	}
 	
-	@RequestMapping("/{ctx}/cmmn/footer")
-	public String comnFooter(@PathVariable String system, HttpServletRequest request, HttpServletResponse respose) throws Exception{
+	@RequestMapping("/cmmn/footer")
+	public String comnFooter(HttpServletRequest request, HttpServletResponse respose) throws Exception{
 		return "layout/footer";
 	}
-	
-	@RequestMapping("/{ctx}/cmmn/layout")
-	public String comnLayout(@PathVariable String system, HttpServletRequest request, HttpServletResponse respose) throws Exception{
-		return "system/" + system + "layout";
-	}
-	
-	public static String getGubunLayout(String system){
-		return "system/" + system + "layout";
-	}
-	
 	
 	@RequestMapping("/test") public String test(Model model) throws Exception{
 	HashMap<String, Object> map = new HashMap<String, Object>();
