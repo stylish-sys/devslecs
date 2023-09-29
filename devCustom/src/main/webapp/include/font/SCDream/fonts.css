@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'SCDream';
+    font-style: normal;
+    font-weight: 200;
+    src: local('SCDream'),
+        url('SCDreamLight.woff2') format('woff2'), 
+        url('SCDreamLight.woff') format('woff'),
+        url('SCDreamLight.ttf') format('truetype'),
+        url('SCDreamLight.otf') format('opentype'),
+        url('SCDreamLight.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'SCDream';
+    font-style: normal;
+    font-weight: 400;
+    src: local('SCDream'),
+        url('SCDreamRegular.woff2') format('woff2'), 
+        url('SCDreamRegular.woff') format('woff'),
+        url('SCDreamRegular.ttf') format('truetype'),
+        url('SCDreamRegular.otf') format('opentype'),
+        url('SCDreamRegular.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'SCDream';
+    font-style: normal;
+    font-weight: 600;
+    src: local('SCDream'),
+        url('SCDreamMedium.woff2') format('woff2'), 
+        url('SCDreamMedium.woff') format('woff'),
+        url('SCDreamMedium.ttf') format('truetype'),
+        url('SCDreamMedium.otf') format('opentype'),
+        url('SCDreamMedium.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'SCDream';
+    font-style: normal;
+    font-weight: 700;
+    src: local('SCDream'),
+        url('SCDreamBold.woff2') format('woff2'), 
+        url('SCDreamBold.woff') format('woff'),
+        url('SCDreamBold.ttf') format('truetype'),
+        url('SCDreamBold.otf') format('opentype'),
+        url('SCDreamBold.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'SCDream';
+    font-style: normal;
+    font-weight: 900;
+    src: local('SCDream'),
+        url('SCDreamBlack.woff2') format('woff2'), 
+        url('SCDreamBlack.woff') format('woff'),
+        url('SCDreamBlack.ttf') format('truetype'),
+        url('SCDreamBlack.otf') format('opentype'),
+        url('SCDreamBlack.eot') format('embedded-opentype');
+}

@@ -1,0 +1,37 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.5'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'java'
+	id 'war'
+}
+
+group = 'com.dev'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'	//web dependency
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'	//mybatis
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'	//jsp
+	implementation 'javax.servlet:jstl'	//jstl
+	implementation 'org.springframework.boot:spring-boot-devtools'	//jstl
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'	//mariadb
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'	//tomcat
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'	//test code
+	
+	implementation 'org.projectlombok:lombok' //lombok getter setter
+	
+	implementation group: 'com.google.guava', name: 'guava', version: '31.1-jre'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
