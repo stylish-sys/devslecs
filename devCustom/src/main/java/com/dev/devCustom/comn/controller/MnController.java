@@ -32,7 +32,7 @@ public class MnController {
 	}
 	
 	@RequestMapping("/{ctx}/cmmn/menu")
-	public String comnMenu(@PathVariable String system, HttpServletRequest request, HttpServletResponse respose) throws Exception{
+	public String comnMenu(@PathVariable String system , HttpServletRequest request, HttpServletResponse respose) throws Exception{
 		return "layout/menu";
 	}
 	
