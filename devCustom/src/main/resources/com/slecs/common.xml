@@ -7,4 +7,60 @@
     	SELECT USER_ID, USER_PW FROM devslecs.user
     </select>
     
+    <select id="weddingBorderList" resultType="ComnVo">
+    	SELECT 
+    		BORDER_SN
+		    ,BORDER_NAME
+		    ,BORDER_PW
+		    ,BORDER_CONTENTS
+		    ,CREATOR_IP
+		    ,CREATOR_DT
+		    ,UPDATE_IP
+		    ,UPDATE_DT
+    	FROM
+    		devslecs.wedding_border
+    	WHERE
+    		1 = 1
+    	ORDER BY
+    		CREATOR_DT
+    	DESC
+    </select>
+    
+    <insert id="weddingBorderInsert" parameterType="java.util.HashMap">
+    	INSERT INTO devslecs.wedding_border (
+		    BORDER_SN
+		    ,BORDER_NAME
+		    ,BORDER_PW
+		    ,BORDER_CONTENTS
+		    ,CREATOR_IP
+		    ,CREATOR_DT
+		    ,UPDATE_IP
+		    ,UPDATE_DT
+		) VALUES (
+		    #{borderSn}
+		    ,#{borderName}
+		    ,#{borderPw}
+		    ,#{borderContents}
+		    ,#{creatorIp}
+		    ,NOW()
+		    ,#{updateIp}
+		    ,NOW()
+		)
+    </insert>
+    
+    <update id="weddingBorderUpdate" parameterType="java.util.HashMap">
+    	UPDATE 
+    		devslecs.wedding_border
+    	SET
+   			BOEDER_NAME = #{borderName}
+   			,BORDER_CONTENTS = #{borderContents}
+   			,UPDATE_IP = #{updateIp}
+   			,UPDATE_DT = NOW()
+   		WHERE
+   			BOADER_SN = #{borderSn}
+    </update>
+    
+    <delete id="weddingBorderDelete" parameterType="java.util.HashMap">
+    	DELETE FROM devslecs.WEDDING_BORDER WHERE BORDER_SN = #{borderSn}
+    </delete>
 </mapper>

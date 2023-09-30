@@ -28,6 +28,8 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'	//test code
 	
 	implementation 'org.projectlombok:lombok' //lombok getter setter
+	
+	implementation 'com.google.code.gson:gson:2.8.8'
 }
 
 tasks.named('test') {

@@ -6,6 +6,9 @@
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/earlyaccess/notosanskr.css">
 <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
 
+<script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
 <div class="img01">
 	<div class="tit">
 		<p class="p1">
