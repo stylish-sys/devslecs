@@ -94,7 +94,7 @@
 
 													if(status == "success"){
 														listFunction();
-														alert('방명록 삭제 완료');
+														alert('방명록 삭제 완료!!');
 													}else{
 														alert('패스워드가 틀립니다.');
 													}
