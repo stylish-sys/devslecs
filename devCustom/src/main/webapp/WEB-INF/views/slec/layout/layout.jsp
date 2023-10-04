@@ -8,7 +8,7 @@
         <title>우리의 결혼을 축하해주세요</title>
         <c:import url="/cmmn/header" />
     </head>
-    <body>
+    <body class="mcard_31">
         <c:import url="/cmmn/menu" />
         <c:import url="/cmmn/left" />
         <c:import url="/WEB-INF/views/slec/${contents}" />

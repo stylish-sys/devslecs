@@ -1,6 +1,7 @@
 	<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 	<link href="/include/css/con_com.css" rel="stylesheet">
+	<link href="/include/css/wedding.css" rel="stylesheet">
 	<!-- font -->
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/earlyaccess/kopubbatang.css">
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/earlyaccess/nanummyeongjo.css">
