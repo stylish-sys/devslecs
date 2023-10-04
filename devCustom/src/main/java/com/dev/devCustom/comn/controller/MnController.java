@@ -57,46 +57,6 @@ public class MnController {
 	public String comnFooter(HttpServletRequest request, HttpServletResponse respose) throws Exception{
 		return "layout/footer";
 	}
-	
-	@RequestMapping("/cmmn/weddingBorder")
-	public String weddingBorder(Model model, HttpServletRequest request, HttpServletResponse respose) throws Exception{
-		return "wedding/border";
-	}
-	
-	@RequestMapping("/cmmn/weddingBorder/list")
-	@ResponseBody
-	public String weddingBorderlist(Model model, HttpServletRequest request, HttpServletResponse respose) throws Exception{
-		Gson gson = new Gson();
-		List<HashMap<String, Object>> borderList = comnService.selectList("comnMapper.weddingBorderList", null);
-		
-		String json = gson.toJson(borderList);
-		return json;
-	}
-	
-	
-	@RequestMapping("/cmmn/weddingBorder/{type}")
-	@ResponseBody
-	public String weddingBorderData(@PathVariable String type, Model model, HttpServletRequest request, HttpServletResponse respose) throws Exception{
-		Gson gson = new Gson();
-		
-		HashMap<String, Object> hashMap = Utils.hashMapConvert(request);
-		hashMap.put("creatorIp", Utils.getClientIpAddress(request));
-		hashMap.put("updateIp", Utils.getClientIpAddress(request));
-		
-		if(type.equals("insert")) {
-			comnService.insert("comnMapper.weddingBorderInsert", hashMap);
-		}else if(type.equals("update")) {
-			comnService.update("comnMapper.weddingBorderUpdate", hashMap);
-		}else {
-			comnService.delete("comnMapper.weddingBorderDelete", hashMap);
-		}
-		
-		Map<String, Object> response = new HashMap<>();
-		response.put("status", "success");
-		String json = gson.toJson(response);
-		return json;
-	}
-	
 }
 
 
