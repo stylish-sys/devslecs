@@ -63,7 +63,6 @@ public class weddingController {
 		String json = gson.toJson(response);
 		return json;
 	}
-	
 }
 
 
