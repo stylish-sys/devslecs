@@ -63,4 +63,14 @@
     <delete id="weddingBorderDelete" parameterType="java.util.HashMap">
     	DELETE FROM devslecs.wedding_border WHERE BORDER_SN = #{borderSn}
     </delete>
+
+	<select id="weddingBorderPassWordCheck" parameterType="java.util.HashMap" resultType = "java.util.HashMap">
+		SELECT
+			COUNT(*) AS count
+		FROM
+			devslecs.wedding_border
+		WHERE
+			BORDER_PW = #{borderPw}
+			AND BORDER_SN = #{borderSn}
+	</select>
 </mapper>

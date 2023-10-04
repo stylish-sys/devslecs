@@ -3,10 +3,10 @@ package com.dev.devCustom.comn.mapper;
 import lombok.Data;
 
 @Data
-public class ComnVo{
+public class ComnVo {
 	private String userId;
 	private String userPw;
-	
+
 	int borderSn;
 	String borderName;
 	String borderPw;
@@ -15,4 +15,6 @@ public class ComnVo{
 	String creatorDt;
 	String updateIp;
 	String updateDt;
+
+	int count;
 }
