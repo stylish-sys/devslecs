@@ -61,6 +61,6 @@
     </update>
     
     <delete id="weddingBorderDelete" parameterType="java.util.HashMap">
-    	DELETE FROM devslecs.WEDDING_BORDER WHERE BORDER_SN = #{borderSn}
+    	DELETE FROM devslecs.wedding_border WHERE BORDER_SN = #{borderSn}
     </delete>
 </mapper>

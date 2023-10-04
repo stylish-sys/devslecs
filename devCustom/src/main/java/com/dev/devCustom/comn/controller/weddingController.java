@@ -29,7 +29,14 @@ public class weddingController {
 	public String weddingBorder(Model model, HttpServletRequest request, HttpServletResponse respose) throws Exception{
 		return "wedding/border";
 	}
-	
+
+	@RequestMapping("/cmmn/weddingBorder/confirm/deleteConfirm")
+	public String deleteConfirm(Model model, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		model.addAttribute("borderSn", request.getParameter("borderSn"));
+
+		return "wedding/deleteConfirm";
+	}
+
 	@RequestMapping("/cmmn/weddingBorder/list")
 	@ResponseBody
 	public String weddingBorderlist(Model model, HttpServletRequest request, HttpServletResponse respose) throws Exception{
@@ -39,9 +46,8 @@ public class weddingController {
 		String json = gson.toJson(borderList);
 		return json;
 	}
-	
-	
-	@RequestMapping("/cmmn/weddingBorder/{type}")
+
+	@RequestMapping("/cmmn/weddingBorder/data/{type}")
 	@ResponseBody
 	public String weddingBorderData(@PathVariable String type, Model model, HttpServletRequest request, HttpServletResponse respose) throws Exception{
 		Gson gson = new Gson();
@@ -54,7 +60,7 @@ public class weddingController {
 			comnService.insert("comnMapper.weddingBorderInsert", hashMap);
 		}else if(type.equals("update")) {
 			comnService.update("comnMapper.weddingBorderUpdate", hashMap);
-		}else {
+		}else if(type.equals("delete")){
 			comnService.delete("comnMapper.weddingBorderDelete", hashMap);
 		}
 		
