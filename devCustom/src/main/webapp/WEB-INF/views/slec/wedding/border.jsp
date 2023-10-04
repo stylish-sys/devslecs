@@ -1,18 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<div class="borderInsert mgt30">
-	<form name="borderForm" id="borderForm">
-		<div>
-			<input type="text" name="borderName" id="borderName" placeholder="이름">
-			<input type="password" name="borderPw" id="borderPw" placeholder="비밀번호">
-			<input type="text" name="borderContents" id="borderContetns">
-		</div>
-		<button type="button" class="abutton">등록하기</button>
-	</form>
-</div>
+<section class="message-section">
+	<div class="sec-tit">" 축하해주세요 "</div>
 
-<div class="borderList mgt30">
-</div>
+	<div class="form">
+		<form name="borderForm" id="borderForm">
+			<div class="group col-2 first">
+				<div>
+					<input type="text" name="borderName" id="borderName" class="input" placeholder="이름">
+				</div>
+				<div>
+					<input type="password" name="borderPw" id="borderPw" class="input" placeholder="비밀번호">
+				</div>
+			</div>
+			<div class="group">
+				<div>
+					<textarea name="borderContents" id="borderContents" class="textarea"></textarea>
+				</div>
+			</div>
+			<div class="buttons">
+				<button type="button" class="btn abutton">등록하기</button>
+			</div>
+		</form>
+	</div>
+
+	<div class="comment borderList">
+		<ul class="comment-list">
+		</ul>
+	</div>
+</section>
 
 <script>
 	$(function(){
@@ -38,7 +54,7 @@
 	});
 	
 	function listFunction(){
-		$(".borderList").empty();
+		$(".comment-list").empty();
 		$.ajax({
             url: "/cmmn/weddingBorder/list", 
             type: "POST",
@@ -50,7 +66,6 @@
             	    let data = stringResult[i];
             	    
             	    let appendData = `
-            	        <ul class="comment-list">
             	            <li class="list">
             	                <div class="tit">
             	                    <span class="name">\${data.borderName}</span>
@@ -59,15 +74,14 @@
             	                <p class="txt">
             	                    \${data.borderContents}
             	                </p>
-            	                <a href="javascript:void(0);" class="delBorder" data-borderSn="\${data.borderSn}">댓글삭제</a>
+            	                <a href="javascript:void(0);" class="delete-btn" data-borderSn="\${data.borderSn}">댓글삭제</a>
             	            </li>
-            	        </ul>
             	    `;
             	    
-            	    $(".borderList").append(appendData);
+            	    $(".comment-list").append(appendData);
             	}
 
-				$(".delBorder").on("click", function(){
+				$(".delete-btn").on("click", function(){
 					let borderSn = $(this).attr("data-borderSn");
 
 					$.ajax({

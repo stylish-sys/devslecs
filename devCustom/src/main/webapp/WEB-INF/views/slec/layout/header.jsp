@@ -9,6 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/earlyaccess/nanumgothic.css">
 	<!-- //font -->
 
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2/xeicon.min.css">
+
 	<script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
 
 	<!--jquery confirm-->

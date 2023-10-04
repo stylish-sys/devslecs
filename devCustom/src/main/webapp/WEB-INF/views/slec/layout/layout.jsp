@@ -10,8 +10,8 @@
     </head>
     <body class="mcard_31">
         <c:import url="/cmmn/menu" />
-        <c:import url="/cmmn/left" />
         <c:import url="/WEB-INF/views/slec/${contents}" />
+        <c:import url="/cmmn/left" />
         <c:import url="/cmmn/footer" />
         <c:import url="/cmmn/weddingBorder" />
     </body>

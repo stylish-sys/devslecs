@@ -22,7 +22,7 @@ ul, span { display:inline-block}
 a {color:#555;display:block;}
 a:hover { font-weight:bold;text-decoration:none;}
 img {max-width:100%;vertical-align:top;font-size:0px;border:0 none;}
-/* ?겕濡?,?븞?뱶濡쒖씠?뱶 ?씤?뭼諛뺤뒪 input[type="checkbox"]{-webkit-appearance:none;-webkit-border-radius:0}*/
+/* ?ê²•æ¿¡?,?ë¸ž?ë±¶æ¿¡ì’–ì” ?ë±¶ ?ì”¤?ë­¼è«›ëº¤ë’ª input[type="checkbox"]{-webkit-appearance:none;-webkit-border-radius:0}*/
 input,button,textarea {border-radius:0;vertical-align:top;}
 input:checked[type="checkbox"]{-webkit-appearance:checkbox}
 input[type=text], input[type=password], input[type=submit], input[type=search], input[type=file], textarea, select { box-sizing:border-box;-webkit-appearance:none;}
@@ -41,7 +41,7 @@ textarea::placeholder{
     color:#999;
 }
 
-/* common.css는 모바일 청첩장 공통영역 정의합니다. */
+/* common.cssëŠ” ëª¨ë°”ì¼ ì²­ì²©ìž¥ ê³µí†µì˜ì—­ ì •ì˜í•©ë‹ˆë‹¤. */
 html{-webkit-text-size-adjust:none; -moz-text-size-adjust:none; -ms-text-size-adjust:none; font-size:4.445vmin;}
 html, body{width:100%; height:100%;}
 body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat-y; background-size:100% auto;}
@@ -110,7 +110,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 .paging a.prev {position:absolute; left:1rem; top:1.250rem; float:left; width:2.625rem; border:1px solid #eee; font-family:"Nanum Gothic";}
 .paging a.next {position:absolute; right:1rem; top:1.250rem; float:right; width:2.625rem; border:1px solid #eee; font-family:"Nanum Gothic";}
 
-/* 공통 레이아웃 */
+/* ê³µí†µ ë ˆì´ì•„ì›ƒ */
 .music{
 	z-index:100;
 	position: fixed;
@@ -152,7 +152,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 }
 
 .greeting-section{
-	padding:3.125rem 0;
+	padding: 1rem;
 }
 .greeting-section .sec-txt{
 	margin-bottom:2.813rem;
@@ -160,8 +160,8 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 	font-weight:300;
 	line-height:1.5rem;
 	color:#111;
-    text-align:center;
-    white-space:pre-wrap;
+	text-align:center;
+	white-space: pre-line;
 }
 .greeting-section .sec-txt.large{
     font-size:0.937rem;
@@ -215,7 +215,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 	padding-left:1.1rem;
 }
 .greeting-section .info .honju .gt-span.deceased-on:after{
-	content:'故'; 
+	content:'æ•…'; 
 	position:absolute; 
 	left:0.188rem; top:0; 
 	display:block; 
@@ -1062,7 +1062,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 }
 
 .message-section{
-	padding:3.125rem 0 0;
+	padding: 1.125rem 0 0;
 	background:#fafafa;
 }
 .message-section .sec-txt{
@@ -1269,8 +1269,8 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 	background-size:3.469rem auto;
 }
 
-/* ******************************** 미디어 쿼리 ******************************** */
- /* Landscape mode (가로형 디바이스) */
+/* ******************************** ë¯¸ë””ì–´ ì¿¼ë¦¬ ******************************** */
+ /* Landscape mode (ê°€ë¡œí˜• ë””ë°”ì´ìŠ¤) */
  @media only screen and (orientation: landscape) {
 	html{font-size:4.445vmax;}
 
@@ -1282,7 +1282,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 		height:auto !important;
 	}
 
-	/* 가로 디바이스에서 갤러리 팝업 사이즈 조정 */
+	/* ê°€ë¡œ ë””ë°”ì´ìŠ¤ì—ì„œ ê°¤ëŸ¬ë¦¬ íŒì—… ì‚¬ì´ì¦ˆ ì¡°ì • */
 	.gallery-pop-wrap .lSSlideOuter{margin:0 20%; overflow:hidden;}
 	.gallery-pop-wrap .pop-header{height:1.625rem; margin-bottom:0.625rem;}
 	.gallery-pop-wrap .pop-header .tit{font-size:0.750rem; line-height:1.625rem;}
@@ -1301,7 +1301,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 	.messageDelete .buttons .btn{font-size:0.5rem; line-height:1.625rem;}
 }
  
-/* Portrait mode (세로형 디바이스) */
+/* Portrait mode (ì„¸ë¡œí˜• ë””ë°”ì´ìŠ¤) */
 @media only screen and (orientation: portrait) {
 	
 }
@@ -1322,9 +1322,9 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 }
 
 @charset "utf-8";
-/* layout.css는 모바일 청첩장 각 레이아웃을 정의합니다. */
+/* layout.cssëŠ” ëª¨ë°”ì¼ ì²­ì²©ìž¥ ê° ë ˆì´ì•„ì›ƒì„ ì •ì˜í•©ë‹ˆë‹¤. */
 
-/* ********************* 1번 템플릿 ********************* */
+/* ********************* 1ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_29 .sec-tit{
 	position:relative;
 	padding-top:0.938rem;
@@ -1483,7 +1483,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 	color:#5b1eaa;
 }
 
-/* ********************* 2번 템플릿 ********************* */
+/* ********************* 2ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_30 {
 	background:url("/mobile/new_m/mcard/images/mcard_30/bg.jpg") 0 0 repeat-y!important;
 	background-size:100% auto;
@@ -1673,7 +1673,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 3번 템플릿 ********************* */
+/* ********************* 3ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_31 .music{
 	top:2.813rem; right:2.5rem;
 }
@@ -1682,7 +1682,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 }
 
 .mcard_31 .sec-tit{
-	margin-bottom:2.5rem;
+	/* margin-bottom:2.5rem; */
 	font-family:'KoPub Batang';
 	font-size:0.875rem;
 	font-weight:400;
@@ -1690,6 +1690,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 	text-align:center;
 	color:#ba8f58;
 	letter-spacing:0.2em;
+	margin-bottom: 1rem;
 }
 .mcard_31 .com-btn.tel.sl{
 	background-color:#a3dad9;
@@ -1798,7 +1799,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 	font-size:0.875rem;	
 }
 .mcard_31 .greeting-section .sec-tit{
-	font-size:0.688rem;
+	font-size: 1rem;
 }
 .mcard_31 .greeting-section .sec-txt{
 	position:relative;
@@ -1848,7 +1849,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 4번 템플릿 ********************* */
+/* ********************* 4ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_32 .sec-tit{
 	margin-bottom:2.5rem;
 	line-height:0;
@@ -2016,7 +2017,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 5번 템플릿 ********************* */
+/* ********************* 5ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_33 .sec-tit{
 	margin-bottom:2.5rem;
 	line-height:0;
@@ -2189,7 +2190,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 6번 템플릿 ********************* */
+/* ********************* 6ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_34 .music{
 	left:1rem; right:inherit;
 }
@@ -2367,7 +2368,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 7번 템플릿 ********************* */
+/* ********************* 7ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_35 .sec-tit{
 	margin-bottom:2.813rem;
 	padding-top:2.125rem;
@@ -2572,7 +2573,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 8번 템플릿 ********************* */
+/* ********************* 8ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_36 .music{
 	right:0.625rem; top:0.625rem;
 }
@@ -2727,7 +2728,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 9번 템플릿 ********************* */
+/* ********************* 9ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_37 .music{
 	right:0.625rem; top:0.625rem;
 }
@@ -2919,7 +2920,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 10번 템플릿 ********************* */
+/* ********************* 10ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_38 .sec-tit{
 	position:relative;
 	padding-bottom:0.813rem;
@@ -3075,7 +3076,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 11번 템플릿 ********************* */
+/* ********************* 11ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_39 .sec-tit{
 	margin-bottom:2.5rem;
 	line-height:0;
@@ -3206,7 +3207,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 12번 템플릿 ********************* */
+/* ********************* 12ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_40 .sec-tit{
 	margin-bottom:2.5rem;
 	line-height:0;
@@ -3350,7 +3351,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 13번 템플릿 ********************* */
+/* ********************* 13ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_41 .music{
 	right:1.625rem; top:1.625rem;
 }
@@ -3525,7 +3526,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 14번 템플릿 ********************* */
+/* ********************* 14ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_42 .sec-tit{
 	margin-bottom:2.5rem;
 	line-height:0;
@@ -3673,7 +3674,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 15번 템플릿 ********************* */
+/* ********************* 15ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_53 .sec-tit{
 	margin-bottom:2.5rem;
 	line-height:0;
@@ -3904,7 +3905,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 16번 템플릿 ********************* */
+/* ********************* 16ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_54 .sec-tit{
 	margin-bottom:2.5rem;
 	line-height:0;
@@ -4138,7 +4139,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 17번 템플릿 ********************* */
+/* ********************* 17ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_55 .sec-tit{
 	margin-bottom:2.5rem;
 	line-height:0;
@@ -4240,7 +4241,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 	font-size:1.5rem;	
 }
 .mcard_55 .visual-section .vertical-item.info .p1 .sl:after{
-	content:'신 랑';
+	content:'ì‹  ëž‘';
 	position:absolute;
 	left:0; top:-1.375rem;
 	display:block;
@@ -4253,7 +4254,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 	letter-spacing:0.25rem;
 }
 .mcard_55 .visual-section .vertical-item.info .p1 .sb:after{
-	content:'신 부';
+	content:'ì‹  ë¶€';
 	position:absolute;
 	left:0; top:-1.375rem;
 	display:block;
@@ -4411,7 +4412,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 18번 템플릿 ********************* */
+/* ********************* 18ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_43 .music{
 	right:2.5rem; top:2.5rem;
 }
@@ -4610,7 +4611,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 19번 템플릿 ********************* */
+/* ********************* 19ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_44 .sec-tit{
 	margin-bottom:1.875rem;
 	font-size:0;
@@ -4859,7 +4860,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 20번 템플릿 ********************* */
+/* ********************* 20ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_45 .sec-tit{
 	padding:0 1rem 1.250rem;
 	line-height:0;
@@ -5056,7 +5057,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 21번 템플릿 ********************* */
+/* ********************* 21ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_46 .sec-tit{
 	margin-bottom:2.5rem;
 	line-height:0;
@@ -5242,7 +5243,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 22번 템플릿 ********************* */
+/* ********************* 22ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_47 {
 	background:#f7b7b5;
 }
@@ -5494,7 +5495,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 23번 템플릿 ********************* */
+/* ********************* 23ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_49 {
 	background:url("/mobile/new_m/mcard/images/mcard_49/bg.png") 0 0 no-repeat;
 	background-size:100% auto;
@@ -5703,7 +5704,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 }
 
 
-/* ********************* 24번 템플릿 ********************* */
+/* ********************* 24ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_48 {
 	background:#ffefe5;
 }
@@ -5964,7 +5965,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 25번 템플릿 ********************* */
+/* ********************* 25ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_50 {
 	background:#e6d3dc;
 }
@@ -6147,7 +6148,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 26번 템플릿 ********************* */
+/* ********************* 26ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_51 {
 	background:#f9eeed;
 }
@@ -6325,7 +6326,7 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 27번 템플릿 ********************* */
+/* ********************* 27ë²ˆ í…œí”Œë¦¿ ********************* */
 .mcard_52 {
 	background:url("/mobile/new_m/mcard/images/mcard_52/bg.jpg") 0 0 repeat-y;
 	background-size:100% auto;
@@ -6521,4 +6522,4 @@ body{background:url("/mobile/new_m/mcard/images/common/bg_white.jpg") 0 0 repeat
 
 
 
-/* ********************* 28번 템플릿 ********************* */
+/* ********************* 28ë²ˆ í…œí”Œë¦¿ ********************* */
