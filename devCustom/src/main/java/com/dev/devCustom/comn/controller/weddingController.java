@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.dev.devCustom.comn.mapper.ComnMap;
 import com.dev.devCustom.comn.service.ComnService;
 import com.dev.devCustom.utils.Utils;
 import com.google.gson.Gson;

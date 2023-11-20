@@ -2,17 +2,9 @@
 <section class="greeting-section">
 	<div class="sec-tit">" 얘들아!, 나 장가간다 "</div>
 	<div class="sec-txt">
-		서로가 마주보며 다져온 사랑을
-		이제 함께 한 곳을 바라보며
-		걸어갈 수 있는 큰 사랑으로
-		키우고자 합니다.
-		저희 두 사람이 사랑의 이름으로
-		지켜나갈 수 있도록
-		앞날을 축복해 주시면
-		감사하겠습니다.
-		선용
+		장가간다 축의금 만땅넣을수있도록하여라~~
 	</div>
-	
+
 	<div class="info">
 		<div class="ib">
 			<div class="tb">

@@ -1,0 +1,603 @@
+:root {
+    --font-size: 10px
+}
+
+html.big:root {
+    --font-size: 11px
+}
+
+html.big2:root {
+    --font-size: 12px
+}
+
+.font_yeon {
+    font-family: yeon sung,cursive
+}
+
+.ft-yeonsung {
+    font-family: yeon sung,cursive
+}
+
+.ft-notosans,.ft-notosans {
+    font-family: noto sans kr,sans-serif
+}
+
+.ft-myeongjo,.ft-myeongjo {
+    font-family: nanum myeongjo,serif
+}
+
+.ft-ridibatang,.ft-ridibatang {
+    font-family: ridibatang,'noto serif kr',serif;
+    font-weight: 400
+}
+
+.ft-twindround,.ft-twindround {
+    font-family: tmoneyroundwind,'noto serif kr',serif;
+    font-weight: 400;
+    letter-spacing: -.5px
+}
+
+.ft-gowundodum {
+    font-family: gowun dodum,sans-serif
+}
+
+.ft-gowundodum *:not(.ft-gowun-bold) {
+    -webkit-text-stroke: .2px
+}
+
+.ft-gowundodum .ft-gowun-bold * {
+    -webkit-text-stroke: 0
+}
+
+.ft-gowundodum .ft-gowun-bold {
+    -webkit-text-stroke: 0
+}
+
+.ft-gowundodum i {
+    -webkit-text-stroke: 0!important
+}
+
+.ft-sunbatang {
+    font-family: sunbatang-light
+}
+
+.ft-iropkebatang {
+    font-family: iropke batang
+}
+
+.typing {
+    font-size: 1.6rem;
+    letter-spacing: -1px
+}
+
+.sectionHead .name {
+    font-size: 1.8rem
+}
+
+.layer01 .title {
+    font-size: 1.65rem;
+    font-weight: 500;
+    letter-spacing: -1px
+}
+
+.layer01 .bottom .bottom_top_text {
+    font-size: 1.45rem
+}
+
+.introLayer .introMent {
+    font-size: 1.4rem;
+    letter-spacing: -.5px
+}
+
+.introLayer .title2 {
+    font-size: 1.4rem
+}
+
+.introLayer .title2>strong {
+    font-size: 1.5rem;
+    font-weight: 500
+}
+
+.subTitle.v2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: -.25px
+}
+
+.sectionHead .desc {
+    font-size: 1.4rem
+}
+
+.sectionHead .desc .emp {
+    font-size: 2rem;
+    letter-spacing: 0;
+    font-weight: 600
+}
+
+ul.wayto li.li {
+    font-size: 1.3rem
+}
+
+ul.wayto li.li .n {
+    font-size: 1.4rem;
+    font-weight: 400
+}
+
+.notibox .title {
+    font-size: 1.4rem
+}
+
+.notibox .note {
+    font-size: 1.3rem;
+    line-height: 1.6
+}
+
+.accst02 .pack {
+    font-size: 1.4rem
+}
+
+.accst02 .pack_wrap .c>li {
+    font-size: 1.2rem
+}
+
+.accst02 .pack_wrap .c>li .b_1 {
+    font-size: 1.2rem
+}
+
+ul.contactus.v2 li .t2 {
+    font-size: 1.5rem
+}
+
+.subTitle.hongu {
+    font-size: 1.4rem
+}
+
+ul.contactus.v2 li .t1 {
+    font-size: 1.3rem
+}
+
+ul.contactus.v2.sub li .t2 {
+    font-size: 1.3rem;
+    color: #333
+}
+
+ul.contactus.v2.sub li .t2 strong {
+    font-size: 1.3rem;
+    color: #000
+}
+
+ul li .bttn {
+    font-size: 1.2rem
+}
+
+.private-books-one .nt {
+    font-size: 1.4rem
+}
+
+.private-books .wrt {
+    font-size: 1.4rem
+}
+
+.private-attend-one .nt {
+    font-size: 1.4rem
+}
+
+.private-attend .wrt {
+    font-size: 1.4rem
+}
+
+.books li {
+    font-size: 12px
+}
+
+.books li .n {
+    line-height: 1.7;
+    -webkit-line-clamp: 7;
+    margin-top: 5px
+}
+
+.books li .b {
+    padding: 15px 8px 10px
+}
+
+.books li .bottom {
+    font-size: 12px
+}
+
+.banner01 .cover {
+    font-size: 1.2rem
+}
+
+.shareK {
+    font-size: 1.3rem
+}
+
+.sectionMg .noticeBtn {
+    font-size: 1.3rem
+}
+
+.ft-yeonsung .sectionMg .noticeBtn {
+    font-size: 1.6rem
+}
+
+.ft-notosans .layer01 .title {
+    font-weight: 700
+}
+
+.ft-notosans .introLayer .introMent {
+    letter-spacing: 0
+}
+
+.ft-notosans .caltit {
+    font-weight: 700
+}
+
+.ft-notosans .subTitle.v2 {
+    font-weight: 700
+}
+
+.ft-notosans .sectionHead .desc .emp {
+    font-weight: 700
+}
+
+.ft-notosans .books li .n {
+    line-height: 1.6;
+    -webkit-line-clamp: 6;
+    margin-top: 5px
+}
+
+.ft-twindround .private-attend-one .nt {
+    line-height: 1.6
+}
+
+.ft-gowundodum .layer01 .title {
+    font-weight: 700
+}
+
+.ft-gowundodum .caltit {
+    font-weight: 700
+}
+
+.ft-gowundodum .caltit .caltit_add {
+    font-weight: 400
+}
+
+.ft-gowundodum .subTitle.v2 {
+    font-weight: 700
+}
+
+.ft-gowundodum ul.wayto li.li .n {
+    font-weight: 700
+}
+
+.ft-gowundodum .notibox .title {
+    font-weight: 700
+}
+
+.ft-iropkebatang .layer01 .title {
+    font-weight: 700
+}
+
+.ft-iropkebatang .caltit {
+    font-weight: 700
+}
+
+.ft-iropkebatang .subTitle.v2 {
+    font-weight: 700
+}
+
+.ft-iropkebatang ul.wayto li.li .n {
+    font-weight: 700
+}
+
+.ft-iropkebatang .notibox .title {
+    font-weight: 700
+}
+
+.ft-iropkebatang .caltit .caltit_add {
+    font-weight: 400
+}
+
+.ft-yeonsung .kkt-share {
+    font-family: ridibatang
+}
+
+.ft-yeonsung .bgmbar>p {
+    font-size: 1.4rem
+}
+
+.ft-yeonsung .more_map_link {
+    font-size: 1.5rem
+}
+
+.ft-yeonsung .typing {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0
+}
+
+.ft-yeonsung .sectionHead .name {
+    font-size: 2.4rem;
+    letter-spacing: 0
+}
+
+.ft-yeonsung .layer01 .title {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0
+}
+
+.ft-yeonsung .layer01 .bottom .bottom_top_text {
+    font-size: 1.8rem
+}
+
+.ft-yeonsung .introLayer .introMent {
+    font-size: 1.7rem;
+    letter-spacing: 0
+}
+
+.ft-yeonsung .introLayer .title2 {
+    font-size: 1.7rem
+}
+
+.ft-yeonsung .introLayer .title2>strong {
+    font-size: 18px
+}
+
+.ft-yeonsung .caltit {
+    font-size: 2rem;
+    letter-spacing: 0
+}
+
+.ft-yeonsung .caltit>.caltit_add {
+    font-size: 1.7rem;
+    margin-top: 10px
+}
+
+.ft-yeonsung .calander th {
+    font-size: 1.4rem;
+    letter-spacing: 0
+}
+
+.ft-yeonsung .calander td {
+    font-size: 1.4rem;
+    letter-spacing: 0
+}
+
+.ft-yeonsung .subTitle.v2 {
+    font-size: 1.8rem;
+    letter-spacing: 0
+}
+
+.ft-yeonsung .sectionHead .desc {
+    font-size: 1.4rem
+}
+
+.ft-yeonsung .sectionHead .desc .emp {
+    font-size: 2.6rem;
+    letter-spacing: 0;
+    font-weight: 400
+}
+
+.ft-yeonsung ul.wayto li.li {
+    font-size: 1.6rem
+}
+
+.ft-yeonsung ul.wayto li.li .n {
+    font-size: 1.8rem;
+    font-weight: 700
+}
+
+.ft-yeonsung .notibox .title {
+    font-size: 1.8rem
+}
+
+.ft-yeonsung .notibox .note {
+    font-size: 1.6rem;
+    line-height: 1.4
+}
+
+.ft-yeonsung .accst02 .pack {
+    font-size: 1.7rem
+}
+
+.ft-yeonsung .accst02 .pack_wrap .c>li {
+    font-size: 1.2rem
+}
+
+.ft-yeonsung .accst02 .pack_wrap .c>li .b_1 {
+    font-size: 1.2rem
+}
+
+.ft-yeonsung ul.contactus.v2 li .t2 {
+    font-size: 1.8rem
+}
+
+.ft-yeonsung .subTitle.hongu {
+    font-size: 1.8rem
+}
+
+.ft-yeonsung ul.contactus.v2 li .t1 {
+    font-size: 1.5rem
+}
+
+.ft-yeonsung ul.contactus.v2.sub li .t2 {
+    font-size: 1.6rem
+}
+
+.ft-yeonsung ul.contactus.v2.sub li .t2 strong {
+    font-size: 1.6rem
+}
+
+.ft-yeonsung .private-books-one .nt {
+    font-size: 1.6rem
+}
+
+.ft-yeonsung .private-books .wrt {
+    font-size: 1.6rem
+}
+
+.ft-yeonsung .private-attend-one .nt {
+    font-size: 1.6rem
+}
+
+.ft-yeonsung .private-attend .wrt {
+    font-size: 1.6rem
+}
+
+.ft-yeonsung .books li {
+    font-size: 15px
+}
+
+.ft-yeonsung .books li .n {
+    line-height: 1.6;
+    -webkit-line-clamp: 6;
+    margin-top: 0
+}
+
+.ft-yeonsung .books li .b {
+    padding: 10px 8px
+}
+
+.ft-yeonsung .books li .bottom {
+    font-size: 13px
+}
+
+.ft-yeonsung .banner01 .cover {
+    font-size: 1.5rem
+}
+
+.ft-yeonsung .shareK {
+    font-size: 1.6rem
+}
+
+.ft-yeonsung .main_frm_ver_2 .desc2 {
+    font-size: 1.7rem
+}
+
+.ft-yeonsung .main_frm_ver_2 .desc3 {
+    font-size: 1.7rem;
+    letter-spacing: -.25px;
+    line-height: 1.5
+}
+
+.ft-yeonsung .int_buttn {
+    font-size: 1.6rem
+}
+
+.ft-yeonsung .sectionDesc {
+    font-size: 1.6rem
+}
+
+.ft-yeonsung .mainLayer .inr .row-03 .g-wrap .g {
+    font-size: 1.9rem
+}
+
+.ft-yeonsung .mainLayer .inr .row-03 .g2-wrap {
+    font-size: 1.6rem
+}
+
+.ft-ridibatang .ch_top .top .sub {
+    letter-spacing: -1px;
+    font-size: 12px;
+    font-family: ridibatang,'noto serif kr',serif!important
+}
+
+.ft-ridibatang .ch_top .top .date {
+    letter-spacing: -2px;
+    font-family: ridibatang,'noto serif kr',serif!important
+}
+
+.ft-notosans .ch_top .top .sub {
+    letter-spacing: -1px;
+    font-size: 12px;
+    font-family: noto sans kr,sans-serif!important
+}
+
+.ft-notosans .ch_top .top .date {
+    letter-spacing: -2px;
+    font-family: noto sans kr,sans-serif!important
+}
+
+.ft-twindround .ch_top .top .sub {
+    letter-spacing: -1px;
+    font-size: 12px;
+    font-family: tmoneyroundwind,sans-serif!important
+}
+
+.ft-twindround .ch_top .top .date {
+    letter-spacing: -2px;
+    font-family: tmoneyroundwind,sans-serif!important
+}
+
+.ft-gowundodum .ch_top .top .sub {
+    letter-spacing: -.5px;
+    font-size: 12px;
+    font-weight: 700
+}
+
+.ft-gowundodum .ch_top .top .date {
+    letter-spacing: -2px
+}
+
+.ft-iropkebatang .ch_top .top .sub {
+    letter-spacing: -.5px;
+    font-size: 12px;
+    font-weight: 700
+}
+
+.ft-iropkebatang .ch_top .top .date {
+    letter-spacing: -2px
+}
+
+.ft-yeonsung .t-btn {
+    font-size: 1.6rem
+}
+
+.ft-yeonsung #interview_pop .tp {
+    font-size: 20px
+}
+
+.ft-yeonsung ul.interview>li.more {
+    font-size: 1.6rem
+}
+
+.ft-yeonsung ul.interview>li>.q {
+    font-size: 1.7rem
+}
+
+.ft-yeonsung ul.interview>li>.a {
+    font-size: 1.6rem
+}
+
+.ft-yeonsung .mainLayer .inr .row-03 .g-wrap .g {
+    font-size: 2rem
+}
+
+.ft-yeonsung .mainLayer .inr .row-03 .g2-wrap {
+    font-size: 1.7rem
+}
+
+.ft-yeonsung .caltit>.caltit_add {
+    font-size: 1.8rem
+}
+
+.ft-yeonsung .calander th {
+    font-size: 1.7rem
+}
+
+.ft-yeonsung .calander td {
+    font-size: 1.6rem
+}
+
+.ft-yeonsung .caltit .caltit_tit {
+    font-size: 2.2rem
+}
+
+.ft-yeonsung .list-books .books-w {
+    font-size: 1.6rem!important
+}
+
+.ft-yeonsung .location_wrapper .tbox.emp {
+    font-size: 2.4rem
+}
