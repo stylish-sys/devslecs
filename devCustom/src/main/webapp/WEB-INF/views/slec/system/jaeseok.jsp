@@ -4,14 +4,15 @@
 		<div class="sectionMg introLayer">
 	        <div class="sectionHead anibox hd">
 	            <span class="name">
-					신랑, 이선용입니다.
+					신랑 아버지, 이재석입니다.
 				</span>
 	        </div>
 	        <div class="introMent anibox f17 hd">
 	            <div id="intro-ment-area">
-	                <p>특별한 순간을 함께 나누어 주기<br>위해 당신을 초대합니다.<br>
-	                당신의 참석은 나와 나의 신부를 <br>좀 더 특벼랗게 만들어 줄 거예요.<br>
-	                반드시 참석해 주시면 감사하겠습니다.</p>
+	                <p>저희 아이들이 이제 어른이 되려고 합니다.<br>
+	                 어여쁜 배필을 만나 새 둥지를 마련하게 되었습니다.<br>
+	                 필히 참석하여 주시길 바라며,<br>
+	                 그 사랑이 영원하길 축복해 주시길 바랍니다</p>
                 </div>
         	</div>
        	</div>
