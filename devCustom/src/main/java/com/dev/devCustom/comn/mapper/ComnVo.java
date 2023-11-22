@@ -15,6 +15,12 @@ public class ComnVo {
 	String creatorDt;
 	String updateIp;
 	String updateDt;
+	
+	String sysSn;
+	String sysId;
+	String sysName;
+	String sysCnt;
+	String createDt;
 
 	int count;
 }

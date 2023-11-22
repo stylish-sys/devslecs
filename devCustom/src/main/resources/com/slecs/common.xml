@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "C:\Users\slecs\Desktop\slecs\devslecs\devCustom\src\mybatis-3-mapper.dtd">
 
 <mapper namespace="comnMapper">
     <select id="selectTest"  resultType="ComnVo" >
     	SELECT USER_ID, USER_PW FROM devslecs.user
     </select>
+    
+    <select id="systemSeqSelect" parameterType="java.util.HashMap" resultType="java.util.HashMap">
+    	SELECT SYSTEM_SEQ FROM devslecs.slecs_seq WHERE SYSTEM_SEQ_ID = #{systemSeqId}
+    </select>
+    
+    <update id="systemSeqUpdate" parameterType="java.util.HashMap">
+    	UPDATE
+    		devslecs.slecs_seq
+    	SET
+    		SYSTEM_SEQ = SYSTEM_SEQ + 1
+    	WHERE
+    		SYSTEM_SEQ_ID = #{systemSeqId}
+    </update>
     
     <select id="weddingBorderList" resultType="ComnVo">
     	SELECT 
@@ -73,4 +85,75 @@
 			BORDER_PW = #{borderPw}
 			AND BORDER_SN = #{borderSn}
 	</select>
+	
+	<select id="weddingSystemList" parameterType="java.util.HashMap" resultType="java.util.HashMap">
+		SELECT
+			SYS_SN
+			,SYS_ID
+			,SYS_NAME
+			,SYS_CNT
+			,CREATEDT
+		FROM
+			devslecs.slecs_wedding_system			
+		WHERE
+			1 = 1
+	</select>
+	
+	<select id="weddingSystemView" parameterType="java.util.HashMap" resultType = "java.util.HashMap">
+		SELECT
+			SYS_SN
+			,SYS_ID
+			,SYS_NAME
+			,SYS_CNT
+			,CREATEDT
+		FROM
+			devslecs.slecs_wedding_system			
+		WHERE
+			SYS_SN = #{sysSn}
+	</select>
+	
+	<select id="weddingSystemSysId" parameterType="java.util.HashMap" resultType = "java.util.HashMap">
+		SELECT
+			SYS_SN
+			,SYS_ID
+			,SYS_NAME
+			,SYS_CNT
+			,CREATEDT
+		FROM
+			devslecs.slecs_wedding_system			
+		WHERE
+			SYS_ID = #{sysId}
+	</select>
+	
+    <insert id="weddingSystemInsert" parameterType="java.util.HashMap">
+    	INSERT INTO devslecs.slecs_wedding_system (
+		   	SYS_SN
+			,SYS_ID
+			,SYS_NAME
+			,SYS_CNT
+			,CREATEDT
+		) VALUES (
+			#{sysSn}
+			,#{sysId}
+			,#{sysName}
+			,#{sysCnt}
+			,NOW()
+		)
+    </insert>
+    
+    <update id="weddingSystemUpdate" parameterType="java.util.HashMap">
+    	UPDATE 
+    		devslecs.slecs_wedding_system
+    	SET
+   			SYS_ID		=	#{sysId}
+			,SYS_NAME	=	#{sysName}
+			,SYS_CNT	=	#{sysCnt}
+			,CREATEDT	= 	NOW()
+   		WHERE
+   			SYS_SN = #{sysSn}
+    </update>
+    
+    <delete id="weddingSystemDelete" parameterType="java.util.HashMap">
+    	DELETE FROM devslecs.slecs_wedding_system WHERE SYS_SN = #{sysSn}
+    </delete>
 </mapper>

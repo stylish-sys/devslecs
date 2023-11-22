@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+	
 <section class="message-section">
-	<div class="sec-tit">" 축하해주세요 "</div>
+	<div class="sec-tit">시스템 등록</div>
 
 	<div class="form">
-		<form name="borderForm" id="borderForm">
+		<form name="systemForm" id="systemForm">
 			<div class="group col-2 first">
 				<div>
 					<input type="text" name="borderName" id="borderName" class="input" placeholder="이름">
@@ -32,14 +33,15 @@
 
 <script>
 	$(function(){
+		
 		listFunction();
 		
 		$(".abutton").on("click", function(){
 			if(confirm("방명록을 등록하시겠습니까")){
 				$.ajax({
-					url : "/system/data/insert",
+					url : "/system/data/list",
 					type : "POST",
-					data : $("#borderForm").serialize(),
+					data : $("#systemForm").serialize(),
 					success : function(result){
 						listFunction();
 						alert("방명록 등록 완료");
