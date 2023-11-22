@@ -1,7 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
 	
-<section class="message-section">
+<h2>Setting</h2>
+<div class="tbl_st mgt30">
+	<table>
+		<thead>
+			<tr>
+				<th>
+					SysId
+				</th>
+				<th>
+					Name
+				</th>
+				<th>
+					contents
+				</th>
+			</tr>
+		</thead>
+		<tbody class="viewTr">
+		</tbody>
+	</table>
+</div>
+<div class="">
 	<div class="sec-tit">시스템 등록</div>
 
 	<div class="form">
@@ -29,7 +48,7 @@
 		<ul class="comment-list">
 		</ul>
 	</div>
-</section>
+</div>
 
 <script>
 	$(function(){
@@ -55,31 +74,35 @@
 	});
 	
 	function listFunction(){
-		$(".comment-list").empty();
+		$(".viewTr").empty();
+		
 		$.ajax({
             url: "/system/data/list", 
             type: "POST",
-            success: function(results) {
-            	let stringResult = JSON.parse(results);
+            success: function(result) {
+            	let stringResult = JSON.parse(result);
             	console.log(stringResult);
 
             	for (let i = 0; i < stringResult.length; i++) {
             	    let data = stringResult[i];
             	    
             	    let appendData = `
-            	            <li class="list">
-            	                <div class="tit">
-            	                    <span class="name">\${data.borderName}</span>
-            	                    <span class="date">\${data.updateDt}</span>
-            	                </div>
-            	                <p class="txt">
-            	                    \${data.borderContents}
-            	                </p>
-            	                <a href="javascript:void(0);" class="delete-btn" data-borderSn="\${data.borderSn}">댓글삭제</a>
-            	            </li>
+            	    	<tr>
+            	    		<td>
+            	    			<a href="/system/data/view?sysSn=\${data.sysSn}">
+            	    				\${data.sysId}
+            	    			</a>
+            	    		</td>
+            	    		<td>
+            	    			\${data.sysName}
+            	    		</td>
+            	    		<td>
+            	    			\${data.sysCnt}
+            	    		</td>
+            	    	</tr>
             	    `;
             	    
-            	    $(".comment-list").append(appendData);
+	           	    $(".viewTr").append(appendData);
             	}
 
 				$(".delete-btn").on("click", function(){

@@ -8,10 +8,12 @@
         <title>선용 셋팅</title>
         <c:import url="/setting/header" />
     </head>
-    <body class="">
-        <c:import url="/setting/menu" />
-        <c:import url="${contents}" />
-        <c:import url="/setting/left" />
-        <c:import url="/setting/footer" />
+    <body class="" id="">
+    	<div id="wrap">
+	        <c:import url="/setting/menu" />
+	        <c:import url="${contents}" />
+	        <c:import url="/setting/left" />
+	        <c:import url="/setting/footer" />
+    	</div>
     </body>
 </html>

@@ -48,12 +48,20 @@ public class weddigSystemController {
 			comnService.update("comnMapper.weddingSystemUpdate", comnMap);
 		} else if (type.equals("delete")) {
 			comnService.delete("comnMapper.weddingSystemDelete", comnMap);
-		} else if (type.equals("list")) {
-			List<HashMap<String, Object>> list = comnService.selectList("comnMapper.weddingSystemList", comnMap);
-			response.put("result", list);
-		} 
+		}
 
 		String json = gson.toJson(response);
+		return json;
+	}
+	
+
+	@RequestMapping("/system/data/list")
+	@ResponseBody
+	public String weddingBorderlist(Model model, HttpServletRequest request, HttpServletResponse respose)
+			throws Exception {
+		Gson gson = new Gson();
+		List<HashMap<String, Object>> list = comnService.selectList("comnMapper.weddingSystemList", null);
+		String json = gson.toJson(list);
 		return json;
 	}
 }

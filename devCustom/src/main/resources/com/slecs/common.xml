@@ -86,7 +86,7 @@
 			AND BORDER_SN = #{borderSn}
 	</select>
 	
-	<select id="weddingSystemList" parameterType="java.util.HashMap" resultType="java.util.HashMap">
+	<select id="weddingSystemList" parameterType="java.util.HashMap" resultType="ComnVo">
 		SELECT
 			SYS_SN
 			,SYS_ID
