@@ -20,50 +20,57 @@
 		</tbody>
 	</table>
 </div>
-<div class="">
-	<div class="sec-tit">시스템 등록</div>
 
-	<div class="form">
-		<form name="systemForm" id="systemForm">
-			<div class="group col-2 first">
-				<div>
-					<input type="text" name="borderName" id="borderName" class="input" placeholder="이름">
-				</div>
-				<div>
-					<input type="password" name="borderPw" id="borderPw" class="input" placeholder="비밀번호">
-				</div>
-			</div>
-			<div class="group">
-				<div>
-					<textarea name="borderContents" id="borderContents" class="textarea"></textarea>
-				</div>
-			</div>
-			<div class="buttons">
-				<button type="button" class="btn abutton">등록하기</button>
-			</div>
-		</form>
-	</div>
-
-	<div class="comment borderList">
-		<ul class="comment-list">
-		</ul>
-	</div>
+<div class="btns ar">
+	<a class="btn_bl" id="abutton">등록</a>
 </div>
 
+<div class="insertDiv" style="display:none;">
+	<h2 class="tit2">시스템 등록하기</h2>
+	<form name="systemSettingForm" id="systemSettingForm">
+		<div class="BD_table" id="">
+				<table>
+					<tbody>
+						<tr>
+							<th>SysId</th>
+							<td><input type="text" name="sysId" value="" id="sysId"/></td>
+						</tr>
+						<tr>
+							<th>Name</th>
+							<td><input type="text" name="sysName" value="" id="sysName"/></td>
+						</tr>
+						<tr>
+							<th>Contents</th>
+							<td><textArea name="sysCnt"></textArea></td>
+						</tr>
+					</tbody>
+				</table>
+		</div>
+	</form>
+
+	<div class="btns ar">
+		<a class="btn_bl" id="systemButton">시스템 생성</a>
+	</div>
+</div>
 <script>
 	$(function(){
 		
 		listFunction();
 		
-		$(".abutton").on("click", function(){
-			if(confirm("방명록을 등록하시겠습니까")){
+		$("#abutton").on("click", function(){
+			$(".insertDiv").show();
+		});
+		
+		$("#systemButton").on("click", function(){
+			if(confirm("시스템 등록하시겠습니까")){
 				$.ajax({
-					url : "/system/data/list",
+					url : "/system/data/insert",
 					type : "POST",
-					data : $("#systemForm").serialize(),
+					data : $("#systemSettingForm").serialize(),
 					success : function(result){
 						listFunction();
-						alert("방명록 등록 완료");
+						alert("완료");
+						$(".insertDiv").hide();
 					 },
 		            error: function() {
 		            	alert("error");
