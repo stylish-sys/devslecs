@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 	
-<h2>Setting</h2>
+<h2 class="mgt30">Setting</h2>
 <div class="tbl_st mgt30">
 	<table>
 		<thead>
