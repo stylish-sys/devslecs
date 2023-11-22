@@ -14,6 +14,9 @@
 				<th>
 					contents
 				</th>
+				<th>
+					edit
+				</th>
 			</tr>
 		</thead>
 		<tbody class="viewTr">
@@ -105,6 +108,11 @@
             	    		</td>
             	    		<td>
             	    			\${data.sysCnt}
+            	    		</td>
+            	    		<td>
+	            	    		<a href="/system/data/delete?sysSn=\${data.sysSn}">
+		    	    				삭제
+		    	    			</a>
             	    		</td>
             	    	</tr>
             	    `;

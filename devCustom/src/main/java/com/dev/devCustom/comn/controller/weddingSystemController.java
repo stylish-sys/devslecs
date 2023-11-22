@@ -19,7 +19,7 @@ import com.dev.devCustom.utils.Utils;
 import com.google.gson.Gson;
 
 @Controller
-public class weddigSystemController {
+public class weddingSystemController {
 
 	@Autowired
 	private ComnService comnService;
