@@ -71,8 +71,7 @@ public class weddingController {
 			comnMap.put("borderPw", request.getParameter("borderPw"));
 
 			borderCheckCount = Integer
-					.parseInt(comnService.selectOne("comnMapper.weddingBorderPassWordCheck", comnMap).get("count")
-							.toString());
+					.parseInt(comnService.selectOne("comnMapper.weddingBorderPassWordCheck", comnMap).toString());
 
 			if (borderCheckCount > 0) {
 				comnService.delete("comnMapper.weddingBorderDelete", comnMap);

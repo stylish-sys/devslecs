@@ -20,7 +20,10 @@ public class ComnVo {
 	String sysId;
 	String sysName;
 	String sysCnt;
-	String createDt;
+	String createdt;
+	
+	String systemSeq;
+	String systemSeqId;
 
 	int count;
 }

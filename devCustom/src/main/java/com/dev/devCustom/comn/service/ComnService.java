@@ -8,6 +8,8 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.dev.devCustom.comn.mapper.ComnVo;
+
 @Service
 public class ComnService {
 
@@ -15,6 +17,10 @@ public class ComnService {
 	protected SqlSessionTemplate sqlSession;
 
 	public HashMap<String, Object> selectOne(String sqlId, HashMap<String, Object> map) throws Exception {
+		return sqlSession.selectOne(sqlId, map);
+	}
+	
+	public ComnVo selectComnVoOne(String sqlId, HashMap<String, Object> map) throws Exception {
 		return sqlSession.selectOne(sqlId, map);
 	}
 

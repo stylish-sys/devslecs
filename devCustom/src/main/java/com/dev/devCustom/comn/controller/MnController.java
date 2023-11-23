@@ -23,8 +23,9 @@ public class MnController {
 	public String comnWedding(@PathVariable String system, Model model, HttpServletRequest request,
 			HttpServletResponse respose) throws Exception {
 		if (!system.contains("favicon")) {
-			model.addAttribute("contents", "system/" + system + ".jsp");
+			model.addAttribute("contents", system);
 		}
+		
 		return "layout/layout";
 	}
 

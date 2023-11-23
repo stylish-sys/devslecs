@@ -6,8 +6,8 @@
     	SELECT USER_ID, USER_PW FROM devslecs.user
     </select>
     
-    <select id="systemSeqSelect" parameterType="java.util.HashMap" resultType="java.util.HashMap">
-    	SELECT SYSTEM_SEQ FROM devslecs.slecs_seq WHERE SYSTEM_SEQ_ID = #{systemSeqId}
+    <select id="systemSeqSelect" parameterType="java.util.HashMap" resultType="ComnVo">
+    	SELECT SYSTEM_SEQ AS systemSeq FROM devslecs.slecs_seq WHERE SYSTEM_SEQ_ID = #{systemSeqId}
     </select>
     
     <update id="systemSeqUpdate" parameterType="java.util.HashMap">
@@ -76,7 +76,7 @@
     	DELETE FROM devslecs.wedding_border WHERE BORDER_SN = #{borderSn}
     </delete>
 
-	<select id="weddingBorderPassWordCheck" parameterType="java.util.HashMap" resultType = "java.util.HashMap">
+	<select id="weddingBorderPassWordCheck" parameterType="java.util.HashMap" resultType = "ComnVo">
 		SELECT
 			COUNT(*) AS count
 		FROM
@@ -112,7 +112,7 @@
 			SYS_SN = #{sysSn}
 	</select>
 	
-	<select id="weddingSystemSysId" parameterType="java.util.HashMap" resultType = "java.util.HashMap">
+	<select id="weddingSystemSysId" parameterType="java.util.HashMap" resultType="ComnVo">
 		SELECT
 			SYS_SN
 			,SYS_ID

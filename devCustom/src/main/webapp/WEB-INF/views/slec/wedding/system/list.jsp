@@ -12,9 +12,6 @@
 					Name
 				</th>
 				<th>
-					contents
-				</th>
-				<th>
 					edit
 				</th>
 			</tr>
@@ -44,7 +41,7 @@
 						</tr>
 						<tr>
 							<th>Contents</th>
-							<td><textArea name="sysCnt"></textArea></td>
+							<td><textArea name="sysCnt" style="width: 80%; height: 500px; border: 1px solid #cfcfcf;"></textArea></td>
 						</tr>
 					</tbody>
 				</table>
@@ -99,18 +96,13 @@
             	    let appendData = `
             	    	<tr>
             	    		<td>
-            	    			<a href="/system/data/view?sysSn=\${data.sysSn}">
-            	    				\${data.sysId}
-            	    			</a>
+           	    				\${data.sysId}
             	    		</td>
             	    		<td>
             	    			\${data.sysName}
             	    		</td>
             	    		<td>
-            	    			\${data.sysCnt}
-            	    		</td>
-            	    		<td>
-	            	    		<a href="/system/data/delete?sysSn=\${data.sysSn}">
+	            	    		<a href="javascript:" data-sysSn="\${data.sysSn}" class="delete-btn">
 		    	    				삭제
 		    	    			</a>
             	    		</td>
@@ -121,51 +113,15 @@
             	}
 
 				$(".delete-btn").on("click", function(){
-					let borderSn = $(this).attr("data-borderSn");
+					let sysSn = $(this).attr("data-sysSn");
 
 					$.ajax({
-						url: "/cmmn/weddingBorder/confirm/deleteConfirm",
+						url: "/system/data/delete",
 						type: "post",
-						data : {borderSn : borderSn},
+						data : {sysSn : sysSn},
 						success: function (data) {
-							$.confirm({
-								title: '방명록 삭제',
-								useBootstrap : false,
-								content: data,
-								buttons: {
-									예: {
-										btnClass: 'btn-blue',
-										action: function () {
-											$.ajax({
-												url: "/cmmn/weddingBorder/data/delete",
-												type: "POST",
-												data: { borderSn: $("#borderSnConfirm").val(),
-														borderPw : $("#borderPwConfirm").val()
-												},
-												success: function (result) {
-													let status = result.status;
-
-													if(status == "success"){
-														listFunction();
-														alert('방명록 삭제 완료!!');
-													}else{
-														alert('패스워드가 틀립니다.');
-													}
-												},
-												error: function () {
-													alert("error");
-												}
-											});
-										},
-									},
-									아니요: {
-										btnClass: 'btn-red',
-										action: function () {
-											close();
-										},
-									},
-								},
-							});
+							alert("삭제 성공");
+							listFunction();
 						},
 						error: function () {
 							alert("error");
