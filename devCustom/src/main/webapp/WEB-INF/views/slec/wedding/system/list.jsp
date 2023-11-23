@@ -88,7 +88,6 @@
             type: "POST",
             success: function(result) {
             	let stringResult = JSON.parse(result);
-            	console.log(stringResult);
 
             	for (let i = 0; i < stringResult.length; i++) {
             	    let data = stringResult[i];
