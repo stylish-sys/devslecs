@@ -26,7 +26,7 @@
 </div>
 
 <div class="insertDiv" style="display:none;">
-	<h2 class="tit2">시스템 등록하기</h2>
+	<h2 class="tit3">시스템 등록하기</h2>
 	<form name="systemSettingForm" id="systemSettingForm">
 		<div class="BD_table" id="">
 				<table>
@@ -41,7 +41,7 @@
 						</tr>
 						<tr>
 							<th>Contents</th>
-							<td><textArea name="sysCnt" style="width: 80%; height: 500px; border: 1px solid #cfcfcf;"></textArea></td>
+							<td><textArea name="sysCnt" id="sysCnt" style=" height: 500px; border: 1px solid #cfcfcf;"></textArea></td>
 						</tr>
 					</tbody>
 				</table>
@@ -62,6 +62,10 @@
 		});
 		
 		$("#systemButton").on("click", function(){
+			var text = $("#sysCnt").val();
+			text = text.replace(/(?:\r\n|\r|\n)/g, '<br>');
+			$("#sysCnt").val(text);
+			
 			if(confirm("시스템 등록하시겠습니까")){
 				$.ajax({
 					url : "/system/data/insert",
