@@ -398,8 +398,7 @@
 	                const hours = moment.duration(wday.diff(now)).hours()
 	                const minutes = moment.duration(wday.diff(now)).minutes()
 	                const seconds = moment.duration(wday.diff(now)).seconds()
-	
-	
+
 	                $(".countdown .data-days").text(day);
 	                $(".countdown .data-hour").text(hours);
 	                $(".countdown .data-min").text(minutes);
