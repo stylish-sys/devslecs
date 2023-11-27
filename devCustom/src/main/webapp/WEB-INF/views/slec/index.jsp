@@ -1562,7 +1562,7 @@
                 </div>
             </div>
             <div class="subTitle v2 f18 call-comment ft-gowun-bold">
-                <p>선용, 가은의 결혼식이 <span style="color:var(--main-color);">47</span>일 남았습니다.</p></div>
+                <p>선용, 가은의 결혼식이 <span style="color:var(--main-color);" class="dayValue">47</span>일 남았습니다.</p></div>
         </div>
         <script src="/include/theirmood/js/moment.js"></script>
         <script>
@@ -1580,6 +1580,8 @@
                 $(".countdown .data-hour").text(hours);
                 $(".countdown .data-min").text(minutes);
                 $(".countdown .data-sec").text(seconds);
+
+                $(".dayValue").text(day);
             }
 
 

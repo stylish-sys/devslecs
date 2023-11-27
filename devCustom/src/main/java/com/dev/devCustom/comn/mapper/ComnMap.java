@@ -1,5 +1,7 @@
 package com.dev.devCustom.comn.mapper;
 
+import lombok.Getter;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -74,7 +76,4 @@ public class ComnMap {
 		map.putAll(m);
 	}
 
-	public Map<String, Object> getMap() {
-		return map;
-	}
 }

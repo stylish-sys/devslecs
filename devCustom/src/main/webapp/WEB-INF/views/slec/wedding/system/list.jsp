@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<input type="hidden" name="copyData" id="copyData"/>
 	
 <h2 class="mgt30">Setting</h2>
 <div class="tbl_st mgt30">
@@ -10,6 +12,9 @@
 				</th>
 				<th>
 					Name
+				</th>
+				<th>
+					URL
 				</th>
 				<th>
 					edit
@@ -105,6 +110,9 @@
             	    			\${data.sysName}
             	    		</td>
             	    		<td>
+            	    			<a href="javascript:" onclick="copyUrlToClipboard('\${data.sysId}')">복사</a>
+            	    		</td>
+            	    		<td>
 	            	    		<a href="javascript:" data-sysSn="\${data.sysSn}" class="delete-btn">
 		    	    				삭제
 		    	    			</a>
@@ -116,20 +124,22 @@
             	}
 
 				$(".delete-btn").on("click", function(){
-					let sysSn = $(this).attr("data-sysSn");
-
-					$.ajax({
-						url: "/system/data/delete",
-						type: "post",
-						data : {sysSn : sysSn},
-						success: function (data) {
-							alert("삭제 성공");
-							listFunction();
-						},
-						error: function () {
-							alert("error");
-						},
-					});
+					if(confirm("시스템 삭제 하시겠습니까")){
+						let sysSn = $(this).attr("data-sysSn");
+	
+						$.ajax({
+							url: "/system/data/delete",
+							type: "post",
+							data : {sysSn : sysSn},
+							success: function (data) {
+								alert("삭제 성공");
+								listFunction();
+							},
+							error: function () {
+								alert("error");
+							},
+						});
+					}
 				});
             },
             error: function() {
@@ -137,4 +147,23 @@
             }
         });
 	}
+	function copyUrlToClipboard(url) {
+	    var textArea = document.createElement("textarea");
+	    
+	    textArea.value = "https://maoran.kr/" + url;
+	    
+	    document.body.appendChild(textArea);
+	    
+	    textArea.select();
+	    try {
+	        var successful = document.execCommand('copy');
+	        var message = successful ? 'URL이 복사되었습니다.' : 'URL 복사에 실패했습니다.';
+	        console.log(message);
+	    } catch (err) {
+	        console.error('복사 동작이 지원되지 않습니다.');
+	    }
+	    
+	    document.body.removeChild(textArea);
+	}
+
 </script>
