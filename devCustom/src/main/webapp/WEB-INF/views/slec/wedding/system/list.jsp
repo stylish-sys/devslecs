@@ -28,6 +28,7 @@
 
 <div class="btns ar">
 	<a class="btn_bl" id="abutton">등록</a>
+	
 </div>
 
 <div class="insertDiv" style="display:none;">
