@@ -406,8 +406,6 @@
 
 					$(".dayValue").text(day);
 	            }
-	
-	
 	            getClock();
 	            setInterval(getClock, 1000);
 	        </script>
